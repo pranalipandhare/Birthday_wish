@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Wish</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff8f7;
+    color: #3d3032;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-size: 48px;
+    color: #8f5361;
+}
+
+.section-title p {
+    margin-top: 10px;
+    color: #8b777b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(54, 29, 37, 0.48),
+            rgba(54, 29, 37, 0.48)
+        ),
+        url("images/hero2.jpeg") center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 850px;
+    padding: 20px;
+}
+
+.hero-small {
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 9vw, 90px);
+    line-height: 0.9;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 32px;
+    background: white;
+    color: #8f5361;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    text-align: center;
+    background: #fff;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: auto;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    line-height: 1.6;
+    color: #60474c;
+}
+
+
+/* =========================
+   BABY STORY
+========================= */
+
+.baby-section {
+    background: #f9eeef;
+}
+
+.baby-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.baby-image img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 220px 220px 20px 20px;
+    box-shadow: 0 20px 50px rgba(80,40,50,0.15);
+}
+
+.baby-content h3 {
+    font-size: 45px;
+    color: #8f5361;
+    margin-bottom: 20px;
+}
+
+.baby-content p {
+    line-height: 1.9;
+    color: #766267;
+}
+
+
+/* =========================
+   FAMILY
+========================= */
+
+.family {
+    background: #fff;
+}
+
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.family-card {
+    background: #fff8f7;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(70,30,40,0.08);
+    transition: 0.4s;
+}
+
+.family-card:hover {
+    transform: translateY(-10px);
+}
+
+.family-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.family-card-content {
+    padding: 25px;
+}
+
+.family-card h3 {
+    font-size: 30px;
+    color: #8f5361;
+    margin-bottom: 8px;
+}
+
+.family-card p {
+    color: #77676a;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   RELATIONSHIP
+========================= */
+
+.relationship {
+    background: #f4e4e6;
+}
+
+.relationship-wrapper {
+    max-width: 950px;
+    margin: auto;
+}
+
+.relationship-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.relationship-item:nth-child(even) {
+    direction: rtl;
+}
+
+.relationship-item:nth-child(even) .relationship-text {
+    direction: ltr;
+}
+
+.relationship-item img {
+    width: 104%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.relationship-text h3 {
+    font-size: 42px;
+    color: #8f5361;
+    margin-bottom: 15px;
+}
+
+.relationship-text p {
+    line-height: 1.9;
+    color: #705f63;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    background: #f9eeef;
+}
+
+.gallery {
+    columns: 3 250px;
+    column-gap: 18px;
+}
+
+.gallery img {
+    width: 100%;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    display: block;
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-section {
+    background: #fff;
+    text-align: center;
+}
+
+.letter {
+    max-width: 800px;
+    margin: auto;
+    background: #fff8f7;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(70,30,40,0.08);
+}
+
+.letter h2 {
+    font-size: 50px;
+    color: #8f5361;
+    margin-bottom: 25px;
+}
+
+.letter p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(75, 24, 24, 0.65),
+            rgba(73, 72, 72, 0.65)
+        ),
+        url("images/final.jpeg") center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.final h2 {
+    font-size: clamp(30px, 8vw, 80px);
+}
+
+.final p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #352529;
+    color: #eee;
+    text-align: center;
+    padding: 4px;
+    font-size: 10px;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatHeart 6s linear forwards;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 768px) {
+
+    section {
+        padding: 70px 6%;
+    }
+
+    .section-title h2 {
+        font-size: 40px;
+    }
+
+    .baby-grid,
+    .relationship-item {
+        grid-template-columns: 1fr;
+    }
+
+    .relationship-item:nth-child(even) {
+        direction: ltr;
+    }
+
+    .family-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .baby-image img {
+        height: 420px;
+    }
+
+    .relationship-item img {
+        height: 300px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 35px;
+    }
+
+    .letter {
+        padding: 35px 20px;
+    }
+
+    .letter h2 {
+        font-size: 40px;
+    }
+
+    .letter p {
+        font-size: 21px;
+    }
+
+}
+</style>
+</head>
+<body>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-small">
+            A little story about you
+        </div>
+        <h1>
+            Happy Birthday Rajat<br>
+        </h1>
+        <p>
+            a one soul who deserves all the happiness in life has to offer. ✨
+        </p>
+        <a href="#story" class="hero-button">
+            Let's Start ↓
+        </a>
+    </div>
+</section>
+
+
+
+<!-- =========================
+     INTRO
+========================= -->
+<section class="intro" id="story">
+    <div class="container">
+        <p class="intro-text">
+            "This isn't just a birthday wish.
+            It's a little collection of memories,
+            people and moments that made you
+            the person you are today."
+        </p>
+    </div>
+</section>
+
+<!-- =========================
+     BABY SECTION
+========================= -->
+
+<section class="baby-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>How can anyone explain the love in this guy’s eyes...</h2>
+            <p>Before everything else, there was a you.</p>
+        </div>
+
+        <div class="baby-grid">
+            <div class="baby-image">
+                <img src="images/R2.jpeg" alt="Baby Photo">
+            </div>
+
+            <div class="baby-content">
+                <h3>The Person you are</h3>
+                <p>
+                    There’s something so special about the person you are. 
+                    It’s not just the way you care, 
+                    the way you show up, or the way you 
+                    make people feel comfortable around you.
+                    <br><br>
+                    It’s the little things about you — the way you talk, 
+                    the way you handle things, the way you can make a 
+                    normal moment feel special without even trying.
+                    <br><br>
+                    I hope you always know how deeply appreciated you are. 
+                    I’m proud of the man you are, 
+                    and I hope life gives you all the happiness, 
+                    success, peace, and love that you deserve.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- =========================
+     FAMILY
+========================= -->
+
+<section class="family">
+    <div class="container">
+        <div class="section-title">
+            <h2>The People Who Made You</h2>
+            <p>
+                Every person has a story behind them.
+                These are the people who are part of yours.
+            </p>
+        </div>
+
+        <div class="family-grid">
+            <div class="family-card">
+                <img src="images/family1.jpeg">
+                <div class="family-card-content">
+                    <h3>Family</h3>
+                    <p>
+                    The people who look at you with hope in their eyes, believing in your dreams, finding their happiness in your happiness, and quietly building their own dreams around the person you’re becoming.
+                    </p>
+                </div>
+            </div>
+
+            <div class="family-card">
+                <img src="images/family2.jpeg">
+                <div class="family-card-content">
+                    <h3>Gabrya</h3>
+                    <p>
+The ones who grew up with you, shared your craziest childhood memories, and have been a part of your journey since day one
+                    </p>
+                </div>
+            </div>
+
+            <div class="family-card">
+                <img src="images/family3.jpeg">
+                <div class="family-card-content">
+                    <h3>Annu</h3>
+                    <p>
+                      The person who made your life more easier, more lighter and a lot more beautiful just by being always there for you
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     RELATIONSHIP
+========================= -->
+
+<section class="relationship">
+    <div class="container">
+        <div class="section-title">
+            <h2>The People You Chose</h2>
+            <p>
+                Some relationships are given to us.
+                Some are found along the way.
+            </p>
+        </div>
+
+        <div class="relationship-wrapper">
+            <div class="relationship-item">
+                <img src="images/love2.jpeg">
+                <div class="relationship-text">
+                    <h3>A Special One❤️</h3>
+                    <p>
+                        Every story has that one person
+                        who makes ordinary days feel
+                        a little more special.
+                        <br><br>
+                        She is the best gift you received in this life and you know that very well.
+                        So just keep her around you, to stay you and her happy forever...!
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="relationship-item">
+                <img src="images/friends.jpeg">
+                <div class="relationship-text">
+                    <h3>The Crazy Ones 🥂</h3>
+                    <p>
+                        The friends who have seen
+                        every version of you.
+                        The laughter, fights,
+                        late-night conversations,
+                        stupid jokes and unforgettable
+                        memories.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     TIMELINE
+========================= -->
+
+<!-- =========================
+     PHOTO GALLERY
+========================= -->
+
+<section class="gallery-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Little Moments</h2>
+            <p>
+                Because sometimes pictures remember
+                what words cannot.
+            </p>
+        </div>
+        <div class="gallery">
+            <img src="images/photo1.jpeg">
+            <img src="images/photo2.jpeg">
+            <img src="images/photo3.jpeg">
+            <img src="images/photo4.jpeg">
+            <img src="images/photo5.jpeg">
+            <img src="images/photo6.jpeg">
+            <img src="images/photo7.jpeg">
+            <img src="images/photo8.jpeg">
+            <img src="images/photo9.jpeg">
+            <img src="images/photo10.jpeg">
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section class="letter-section">
+    <div class="container">
+        <div class="letter">
+            <h2>A Sweet Message For You</h2>
+            <p>
+                Happy Birthday to one of the most
+                beautiful souls I know.
+                <br>
+                I hope you always remember how loved
+                you are.
+                <br>
+                Life will change, people will come and go,
+                and new chapters will begin...
+                <br>
+                But I hope you never forget the person
+                you are today.
+                <br>
+                Keep laughing.
+                Keep dreaming.
+                Keep being you.
+                <br>
+                Here's to another beautiful chapter
+                of your life. 🥂
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final">
+    <div>
+        <h2>Happy Birthday once again...!</h2>
+        <p>
+            May your next chapter be your most beautiful one yet.
+        </p>
+    </div>
+</section>
+
+<footer>
+    ......I may not have the perfect words or gift to make you feel special, 
+    so I tried to create a little something instead — straight from my heart, 
+    filled with the memories and people who make your story yours❤️
+</footer>
+
+
+
+<!-- =========================
+     HEART ANIMATION
+========================= -->
+
+<script>
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (Math.random() * 3 + 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 7000);
+
+}
+
+setInterval(createHeart, 1000);
+
+</script>
+
+
+</body>
+</html>
